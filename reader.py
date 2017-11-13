@@ -35,7 +35,7 @@ def getUser() :
 				value = {g:0}
 				user[key].update(value)
 		#sorting genre-liking dictionary by key
-		user[key]=sorted(user[key])
+		user[key]=sorted(user[key].items())
 
 				
 
