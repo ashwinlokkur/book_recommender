@@ -34,9 +34,13 @@ def getUser() :
 			if not user[str(i)].has_key(g):
 				value = {g:0}
 				user[key].update(value)
+		#sorting genre-liking dictionary by key
+		user[key]=sorted(user[key])
+
 				
 
 get()
 getUser()
 #print data['1']['genre']
-print len(user[str(1)])
+#print len(user[str(1)])    --> Prints 194 i.e user 1 has 194 genres as we wanted
+print user
