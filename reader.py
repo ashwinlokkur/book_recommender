@@ -2,6 +2,7 @@ import csv
 
 data = {}
 user={}
+userLiking={}
 genres=set([])
 
 def get() :
@@ -37,10 +38,22 @@ def getUser() :
 		#sorting genre-liking dictionary by key
 		user[key]=sorted(user[key].items())
 
-				
+
+def getUserLiking():
+	global userLiking
+	for i in range(1, len(user)+1):
+		temp=[]
+		key = str(i)
+		for l in user[key]:
+			temp.append(int(l[1]))
+		value={key:temp}
+		userLiking.update(value)					
 
 get()
 getUser()
+getUserLiking()
 #print data['1']['genre']
 #print len(user[str(1)])    --> Prints 194 i.e user 1 has 194 genres as we wanted
+#print user
+#print 'Absurdism' in user[str(1)]
 print user
