@@ -22,7 +22,7 @@ def dif(i,j):
 def similarityMatrix():
 	for i in sorted(readers.userLiking.keys()):
 		for j in sorted(readers.userLiking.keys()):
-			simMatrix[int(i)-1,int(j)-1] = (dif(i,j)) 	
+			simMatrix[int(i)-1,int(j)-1] = (dif(i,j))/9.7 	
 	print simMatrix
 
 similarityMatrix()
@@ -37,7 +37,7 @@ k = (sorted(readers.userLiking.keys()))
 k.remove(ip)
 
 y = "" 
-x = 9.7
+x = 1
 for i in k:
 	if(x > simMatrix[int(ip)-1,int(i)-1]):
 		x = simMatrix[int(ip)-1,int(i)-1]
