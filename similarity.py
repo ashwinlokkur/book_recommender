@@ -27,7 +27,7 @@ def similarityMatrix():
 
 similarityMatrix()
 
-ip = raw_input("What user do you want to find similarity to? please eneter between 1 and 3 \n")
+ip = raw_input("What user do you want to find similarity to? please eneter between 1 and "+ str(n) +"\n")
  
 if ip not in readers.userLiking.keys():
 	print("invalid input")
