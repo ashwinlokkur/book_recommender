@@ -1,4 +1,5 @@
 import csv 
+import codecs
 
 data = {}
 user={}
@@ -20,6 +21,7 @@ def get() :
 def getUser() :
 	global user
 	with open("userCSV.csv") as db:
+		#reader = csv.DictReader(l.replace('\0','') for l in db)
 		reader = csv.DictReader(db)
 		for row in reader:
 			key = row['user_id']
@@ -56,4 +58,4 @@ getUserLiking()
 #print len(user[str(1)])    --> Prints 194 i.e user 1 has 194 genres as we wanted
 #print user
 #print 'Absurdism' in user[str(1)]
-print userLiking
+#print userLiking
