@@ -24,18 +24,18 @@ def generate():
 
 @app.route("/forward/", methods=['GET','POST'])
 def foo():
-	print 'hi'
+
 	for i in range(5):
 		n = "top"+str(i+1)
 		selected_genres.append(request.form[n])
-		print selected_genres
+
 	for i in range(2):
-		n = "genre"+str(i+1)
+		n = "genres"+str(i+1)
 		selected_genres.append(request.form[n])	
-		print selected_genres
-def rend():
+	print selected_genres	
 	return render_template('index.html',genres=genres, top_10 =top_10,sel = sel)
-	# print selected_genres
+		
+	
 
 if __name__ == '__main__':
     app.run(debug = True, port = 5000)
