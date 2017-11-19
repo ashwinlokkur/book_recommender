@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>newUser</title>
+</head>
+<body>
+	<p align="center"><b>ENTER NEW USER INFO HERE</b></p>
+
+
+<form action = '/forward/' method="post">
+<p> Please choose the TOP 5 genres you like :- </p>
+{%for j in sel%}
+	<p>Selection {{j}} : 
+		<select name= top{{j}}>
+	   		{% for i in top_10 %}
+	    		<option value= "{{i}}" >{{i}}</option>"
+	    	{% endfor %}
+		</select>
+	</p>
+{% endfor %}
+	<br><br>
+<p>Other genres that you might like :-</p>
+	<p>Selection 1 : 
+		<select name= genres1>
+	   		{% for i in genres %}
+	    		<option value= "{{i}}" >{{i}}</option>"
+	    	{% endfor %}
+		</select>
+	</p>
+	<p>Selection 2 : 
+		<select name= genres2>
+	   		{% for i in genres %}
+	    		<option value= "{{i}}" >{{i}}</option>"
+	    	{% endfor %}
+		</select>
+	</p>
+	<br><br>
+    <button name="submit" onclick="foo()" type="submit">Submit</button>
+</form>
+</body>
+</html>
