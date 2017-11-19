@@ -32,7 +32,7 @@ def foo():
 	for i in range(2):
 		n = "genres"+str(i+1)
 		selected_genres.append(request.form[n])	
-	print selected_genres	
+	print list(set(selected_genres))	
 	return render_template('index.html',genres=genres, top_10 =top_10,sel = sel)
 		
 	
