@@ -44,14 +44,13 @@ def addNewUser(newGenres):
 	fd = open('userCSV.csv','a')
 	w = csv.writer(fd)
 	newRow=[]
-	w.writerow([])	
 	for g in newGenres:
+		newRow=[]
 		newRow.append(str(len(user)+1))
 		newRow.append("")
 		newRow.append(str(g))
 		newRow.append(str(1))
 		w.writerow(newRow)
-		newRow=[]
 	fd.close()
 
 def getUserLiking():
