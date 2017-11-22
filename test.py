@@ -37,12 +37,12 @@ def foo():
 	#print list(set(selected_genres))
 	readers.addNewUser(set(selected_genres))
 	#os.system("python readers.py")
-	os.system("python similarity.py")	
+	print("new user added into the Database")
 	return render_template('index.html',genres=genres, top_10 =top_10,sel = sel)
 		
 	
 
 if __name__ == '__main__':
-    app.run(debug = False, port = 5000)
+    app.run(debug = True, port = 5000)
 
 

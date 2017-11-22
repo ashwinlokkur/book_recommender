@@ -74,4 +74,4 @@ getUserLiking()
 #print len(user[str(1)])    --> Prints 194 i.e user 1 has 194 genres as we wanted
 #print user
 #print 'Absurdism' in user[str(1)]
-#print userLiking
+# print len(userLiking)

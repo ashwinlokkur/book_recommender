@@ -6,12 +6,15 @@ import math
 import csv
 
 n = len(readers.userLiking)
+# print n
 
 userLiking1 = {}
 simMatrix = np.zeros((n,n))
 
+# print(readers.userLiking.keys())
 for i in sorted(readers.userLiking.keys()):
 	userLiking1[i] = ''.join(str(e) for e in readers.userLiking[i])
+# print userLiking1
 
 def getgenre(user1):
 	genre = set();
@@ -42,7 +45,7 @@ def recommendbook(genre , user2):
 	
 
 def dif(i,j):
-	m = len(userLiking1[i])
+	m = 194
 	diff = 0
 	for k in range(m):
 		diff += (int(userLiking1[i][k]) - int(userLiking1[j][k]))**2
