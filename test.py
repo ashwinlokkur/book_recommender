@@ -1,6 +1,8 @@
 from flask import Flask
 from flask import render_template,request
 import csv
+import readers
+import os
 # import similarity
 
 app = Flask(__name__)
@@ -32,12 +34,15 @@ def foo():
 	for i in range(2):
 		n = "genres"+str(i+1)
 		selected_genres.append(request.form[n])	
-	print list(set(selected_genres))	
+	#print list(set(selected_genres))
+	readers.addNewUser(set(selected_genres))
+	#os.system("python readers.py")
+	os.system("python similarity.py")	
 	return render_template('index.html',genres=genres, top_10 =top_10,sel = sel)
 		
 	
 
 if __name__ == '__main__':
-    app.run(debug = True, port = 5000)
+    app.run(debug = False, port = 5000)
 
 

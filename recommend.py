@@ -8,7 +8,7 @@ def recommendbook(genere , user):
 				books.append(row)
 		
 	books = sorted(books , key = lambda x : float(x[-1]))	
-	print(books[0]);
+	print(books[0])
 
-recommendbook('Adventure'," ")	
+#recommendbook('Adventure'," ")	
 	
